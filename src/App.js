@@ -35,10 +35,10 @@ class App extends Component {
   render() {
     return(
       <ul>
-        {listOfBooks.map(book => (
+        {this.state.listOfBooks.map(book => (
           <li key={book.id}>
-            {book.title}
-            {book.authors}
+            {book.volumeInfo.title}
+            {book.volumeInfo.authors.join(", ")}
           </li>
         ))}
       </ul>
